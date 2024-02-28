@@ -1,22 +1,10 @@
 'use strict';
 
-const degrees = prompt('Enter degrees:');
+const fahrenheitToCelsius = (degrees) => ((degrees - 32) * 5) / 9;
 
-if (isNaN(+degrees)) {
-  alert(`Cannot convert ${degrees}. It must be a number`);
-} else {
-  const scale = prompt('Enter the scale (C or F):');
-  alert(convertTemperatureString(degrees, scale));
-}
+const celsiusToFahrenheit = (degrees) => (degrees * 9) / 5 + 32;
 
-function fahrenheitToCelsius(degrees) {
-  return ((degrees - 32) * 5) / 9;
-}
-function celsiusToFahrenheit(degrees) {
-  return (degrees * 9) / 5 + 32;
-}
-
-function convertTemperatureString(degrees, scale) {
+const convertTemperatureString = (degrees, scale) => {
   if (scale === 'F') {
     return `${degrees} \u00B0F --> ${fahrenheitToCelsius(degrees)} \u00B0C`;
   } else if (scale === 'C') {
@@ -24,4 +12,13 @@ function convertTemperatureString(degrees, scale) {
   } else {
     return 'Unknown scale';
   }
+};
+
+const degrees = prompt('Enter degrees:');
+
+if (isNaN(+degrees)) {
+  alert(`Cannot convert ${degrees}. It must be a number`);
+} else {
+  const scale = prompt('Enter the scale (C or F):');
+  alert(convertTemperatureString(degrees, scale));
 }
