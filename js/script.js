@@ -1,7 +1,7 @@
 'use strict';
 
 const isValidNumber = (num) => {
-  if (!isNaN(+num) || num.trim().length !== 0) return true;
+  if (num.trim().length !== 0 && !isNaN(+num)) return true;
   console.log('Enter a number!');
   alert('Enter a number!');
   return false;
