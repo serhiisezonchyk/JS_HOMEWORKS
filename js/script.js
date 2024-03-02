@@ -1,21 +1,16 @@
 'use strict';
 
 const isValidNumber = (num) => {
-  if (isNaN(+num) || num.trim().length === 0) {
-    console.log('Enter a number!');
-    alert('Enter a number!');
-    return false;
-  }
-  return true;
+  if (!isNaN(+num) || num.trim().length !== 0) return true;
+  console.log('Enter a number!');
+  alert('Enter a number!');
+  return false;
 };
 
 const sum = (a, b) => a + b;
 const subtraction = (a, b) => a - b;
 const multiplication = (a, b) => a * b;
-const division = (a, b) => {
-  if (b === 0) return 'Division by zero! ';
-  return a / b;
-};
+const division = (a, b) => (b === 0 ? 'Division by zero! ' : a / b);
 
 const calculationResult = (operator, a, b) => {
   const result = 'Result: ';
@@ -34,13 +29,10 @@ const calculationResult = (operator, a, b) => {
 };
 const calculate = () => {
   const a = prompt('Enter first value:');
-  if (!isValidNumber(a)) {
-    return;
-  }
+  if (!isValidNumber(a)) return;
+
   const b = prompt('Enter second value:');
-  if (!isValidNumber(b)) {
-    return;
-  }
+  if (!isValidNumber(b)) return;
 
   console.log(calculationResult('+', +a, +b));
   console.log(calculationResult('-', +a, +b));
