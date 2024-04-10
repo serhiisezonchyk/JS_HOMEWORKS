@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Hillel it school homeworks",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "format": "npx prettier --write .",
     "lint": "npx eslint .",
