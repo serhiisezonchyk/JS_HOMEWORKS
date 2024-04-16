@@ -1,7 +1,8 @@
 Function.prototype.myBind = function () {
   const [ctx, ...rest] = arguments;
-  ctx.bindingFunction = this;
-  return () => ctx.bindingFunction(...rest);
+  const newObj = structuredClone(ctx);
+  newObj.func = this;
+  return () => newObj.func(...rest);
 };
 
 const user = {
