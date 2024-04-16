@@ -8,13 +8,7 @@ const flat = function (arr) {
     throw new Error('Function accepts only 1 argument, too much arguments provided');
   }
 
-  const res = arr.reduce((acc, val) => {
-    if (Array.isArray(val)) {
-      return acc.concat(flat(val));
-    } else {
-      return acc.concat(val);
-    }
-  }, []);
+  const res = arr.reduce((acc, val) => (Array.isArray(val) ? acc.concat(flat(val)) : acc.concat(val)), []);
   return res;
 };
 try {
