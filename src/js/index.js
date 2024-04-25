@@ -1,12 +1,14 @@
-const initSum = function () {
-  let res = 0;
-  return function (x) {
-    return (res += x);
+(function () {
+  const initSum = (initial) => {
+    let res = initial;
+    return (num) => {
+      res += num;
+      return res;
+    };
   };
-};
 
-const sum = initSum();
-
-console.log(sum(3));
-console.log(sum(5));
-console.log(sum(5));
+  const sum = initSum(3);
+  console.log(sum(0))
+  console.log(sum(4));
+  console.log(sum(10));
+})();
