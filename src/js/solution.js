@@ -1,6 +1,6 @@
 (function () {
-  let ulId = document.getElementById('ulId');
-  let listItems = ulId.childNodes;
+  const ulId = document.getElementById('ulId');
+  const listItems = ulId.childNodes;
   console.log('Count with Text elements: ', listItems.length);
 
   const liObjects = [];
