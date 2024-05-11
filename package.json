@@ -8,7 +8,9 @@
     "lint": "npx eslint .",
     "lint-fix": "npx eslint --fix .",
     "compile-home-page": "sass --watch ./src/styles/scss/home-page.scss ./src/styles/css/home-page.css",
-    "compile-about-page": "sass --watch ./src/styles/scss/about.scss ./src/styles/css/about.css"
+    "compile-about-page": "sass --watch ./src/styles/scss/about.scss ./src/styles/css/about.css",
+    "build": "gulp",
+    "watch": "gulp watch"
   },
   "author": "Serhii Sezonchyk",
   "license": "ISC",
