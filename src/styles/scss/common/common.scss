@@ -1,0 +1,7 @@
+@use "sass:map";
+
+.container {
+  max-width: map.get($breakpoints, "xxl");
+  margin: 0 auto;
+  padding: 0 15px;
+}

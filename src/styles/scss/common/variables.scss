@@ -1,0 +1,17 @@
+$fonts-dir-path: './../../assets/fonts/';
+
+$font-weights: (
+    "regular": 400,
+    "medium": 500,
+    "bold": 700
+);
+
+
+$breakpoints: (
+    "xxl": 1400px,
+    "xl": 1200px,
+    "lg": 992px,
+    "md": 767px,
+    "sm": 576px,
+    "xs": 320px,
+);
