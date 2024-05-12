@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Hillel it school homeworks",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "format": "npx prettier --write .",
     "lint": "npx eslint .",
@@ -18,14 +19,18 @@
     "lodash": "^4.17.21"
   },
   "devDependencies": {
+    "browser-sync": "^3.0.2",
     "eslint": "^8.57.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.29.1",
     "gulp": "^5.0.0",
+    "gulp-autoprefixer": "^9.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-cli": "^3.0.0",
     "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^9.1.0",
     "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.1.4",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-terser": "^2.1.0",
