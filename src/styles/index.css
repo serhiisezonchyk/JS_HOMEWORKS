@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul li {
+  padding: 5px 0;
+  cursor: pointer;
+  transition: color 0.3s ease-in;
+  border-bottom: 1px solid lightgray;
+}
+li:hover {
+  color: gray;
+}
+
+.btn {
+  padding: 4px 8px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.container {
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+.shop__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+
+.shop__item-el {
+  border: 1px solid lightgray;
+  padding: 5px;
+}
+
+.btn.btn-buy-card {
+  width: 100%;
+  background-color: green;
+  color: white;
+  transition: background-color 0.3s ease-in-out;
+}
+.btn.btn-buy-card:hover {
+  width: 100%;
+  background-color: rgba(0, 128, 0, 0.78);
+}
