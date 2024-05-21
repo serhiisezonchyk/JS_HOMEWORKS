@@ -2,10 +2,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>Todo</title>
   </head>
   <body>
-    <h1>HW</h1>
+    <main>
+      <section class="todo">
+        <div class="container">
+          <div class="todo__wrapper">
+            <form class="todo__form" data-todo-form>
+              <div class="todo__form-controll">
+                <div class="todo__form-controll__item">
+                  <label for="title" class="sr-only">Title</label>
+                  <input type="text" name="title" id="title" placeholder="Title..." />
+                </div>
+                <div class="todo__form-controll__item">
+                  <label for="description" class="sr-only">Description</label>
+                  <textarea type="text" name="description" id="description" placeholder="Description..."></textarea>
+                </div>
+              </div>
+              <div class="todo__form-actions">
+                <button type="submit" class="btn btn-success todo__form-actions__btn" data-add-btn>Add</button>
+                <button type="button" class="btn btn-danger todo__form-actions__btn" data-clear-btn>Clear all</button>
+              </div>
+            </form>
+            <div class="todo__body">
+              <div class="todo__body-list"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <script src="./js/index.js"></script>
   </body>
 </html>
