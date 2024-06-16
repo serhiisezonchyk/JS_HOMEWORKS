@@ -1,0 +1,50 @@
+import Student from './Student.js';
+
+const student1 = new Student('Name1', 'Surname1', 2001);
+console.log(student1.getFullName());
+console.log(student1.getAge());
+student1.addMark(100);
+student1.addMark(90);
+student1.addMark(83);
+student1.absent();
+student1.present();
+student1.present();
+student1.present();
+student1.present();
+student1.present();
+student1.present();
+student1.present();
+student1.present();
+student1.present();
+console.log(student1.attendance)
+console.log('avg mark ', student1.avgMark());
+console.log('avg attendance ', student1.avgAttendance());
+console.log(student1.summary());
+console.log('________');
+
+const student2 = new Student('Name2', 'Surname2', 1994);
+console.log(student2.getFullName());
+console.log(student2.getAge());
+student2.addMark(90);
+student2.addMark(65);
+student2.addMark(76);
+student2.present();
+student2.present();
+student2.present();
+console.log('avg mark ', student2.avgMark());
+console.log('avg attendance ', student2.avgAttendance());
+console.log(student2.summary());
+console.log('________');
+
+const student3 = new Student('Name3', 'Surname3', 2003);
+console.log(student3.getFullName());
+console.log(student3.getAge());
+student3.addMark(70);
+student3.addMark(60);
+student3.addMark(60);
+student3.absent();
+student3.absent();
+student3.absent();
+console.log('avg mark ', student3.avgMark());
+console.log('avg attendance ', student3.avgAttendance());
+console.log(student3.summary());
