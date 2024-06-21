@@ -1,9 +1,9 @@
 (function () {
-  const cachedFunc = (func) => {
+  const cachedFunc = (func,size) => {
     const cache = new Map();
     return (obj) => {
       if (!cache.has(obj)) {
-        if (cache.size === 2) {
+        if (cache.size === size) {
           const firstEl = Array.from(cache).at(0);
           cache.delete(firstEl.at(0));
         }
@@ -23,7 +23,7 @@
   const user2 = { name: 'Serhii', year: '2002' };
   const user3 = { name: 'Serhii', year: '1999' };
 
-  const cachedTest = cachedFunc(testFunc);
+  const cachedTest = cachedFunc(testFunc,10);
   console.log(cachedTest(user1));
   console.log(cachedTest(user2));
   console.log(cachedTest(user2));
