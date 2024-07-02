@@ -1,23 +1,26 @@
 {
-  "name": "js_homeworks",
-  "version": "1.0.0",
-  "description": "Hillel it school homeworks",
-  "main": "index.js",
+  "name": "js-homeworks",
+  "private": true,
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "format": "npx prettier --write .",
-    "lint": "npx eslint .",
-    "lint-fix": "npx eslint --fix ."
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
   },
-  "author": "Serhii Sezonchyk",
-  "license": "ISC",
   "dependencies": {
-    "lodash": "^4.17.21"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
     "eslint": "^8.57.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.29.1",
-    "prettier": "3.2.5"
+    "eslint-plugin-react": "^7.34.2",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
+    "vite": "^5.3.1"
   }
 }
