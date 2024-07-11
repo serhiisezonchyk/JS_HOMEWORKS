@@ -1,10 +1,12 @@
-import './App.css'
+import './App.css';
+import Alert from './components/Alert';
 
 function App() {
-
   return (
-    <>tet</>
-  )
+    <>
+      <Alert text='text' type='success' />
+    </>
+  );
 }
 
-export default App
+export default App;
