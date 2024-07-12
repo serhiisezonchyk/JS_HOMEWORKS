@@ -1,10 +1,13 @@
-import './App.css'
+import './App.css';
+import ListGroup from './components/ListGroup';
 
 function App() {
-
   return (
-    <>tet</>
-  )
+    <ListGroup>
+      <p>one</p>
+      <p>two</p>
+    </ListGroup>
+  );
 }
 
-export default App
+export default App;
