@@ -1,10 +1,8 @@
-import './App.css'
+import './App.css';
+import BtnGroup from './components/BtnGroup';
 
 function App() {
-
-  return (
-    <>tet</>
-  )
+  return <BtnGroup />;
 }
 
-export default App
+export default App;
