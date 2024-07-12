@@ -16,6 +16,7 @@ class ListGroup extends Component {
 }
 
 ListGroup.defaultProps = {
-  childeren: React.No,
+  children: [],
 };
+
 export default ListGroup;
