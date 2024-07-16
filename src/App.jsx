@@ -1,10 +1,14 @@
-import './App.css'
+import './App.css';
+import FormContainer from './components/FormContainer';
 
 function App() {
-
   return (
-    <>tet</>
-  )
+    <div className='vh-100'>
+      <div className='container'>
+        <FormContainer />
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;
