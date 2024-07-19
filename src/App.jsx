@@ -1,10 +1,8 @@
-import './App.css'
+import './App.css';
+import TodoBox from './components/TodoBox';
 
 function App() {
-
-  return (
-    <>tet</>
-  )
+  return <TodoBox />;
 }
 
-export default App
+export default App;
