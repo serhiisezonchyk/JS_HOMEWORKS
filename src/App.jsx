@@ -1,9 +1,10 @@
 import './App.css'
+import Log from './components/Log'
 
 function App() {
 
   return (
-    <>tet</>
+    <Log/>
   )
 }
 
