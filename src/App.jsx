@@ -1,10 +1,8 @@
-import './App.css'
+import './App.css';
+import Component from './components/Component';
 
 function App() {
-
-  return (
-    <>tet</>
-  )
+  return <Component />;
 }
 
-export default App
+export default App;
