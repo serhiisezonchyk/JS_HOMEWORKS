@@ -1,10 +1,15 @@
-import './App.css'
+import './App.css';
+import Card from './components/card/Card';
 
 function App() {
-
   return (
-    <>tet</>
-  )
+    <Card>
+      <Card.Body>
+        <Card.Title>Title</Card.Title>
+        <Card.Text>Text</Card.Text>
+      </Card.Body>
+    </Card>
+  );
 }
 
-export default App
+export default App;
