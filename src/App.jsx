@@ -1,10 +1,8 @@
-import './App.css'
+import './App.css';
+import PostCatalog from './components/PostCatalog';
 
 function App() {
-
-  return (
-    <>tet</>
-  )
+  return <PostCatalog />;
 }
 
-export default App
+export default App;
