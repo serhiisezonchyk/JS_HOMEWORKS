@@ -1,10 +1,8 @@
-import './App.css'
+import './App.css';
+import MarkdownEditor from './components/MarkdownEditor';
 
 function App() {
-
-  return (
-    <>tet</>
-  )
+  return <MarkdownEditor onContentChange={console.log} />;
 }
 
-export default App
+export default App;
