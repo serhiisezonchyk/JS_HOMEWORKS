@@ -1,10 +1,12 @@
-import './App.css'
+import './App.css';
+import PostCatalog from './components/PostCatalog';
 
 function App() {
-
   return (
-    <>tet</>
-  )
+    <main>
+      <PostCatalog />
+    </main>
+  );
 }
 
-export default App
+export default App;
