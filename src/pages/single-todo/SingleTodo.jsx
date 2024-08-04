@@ -1,20 +1,20 @@
 import { Button, Container, MenuItem, Select, TextField } from '@mui/material';
 import { useFormik } from 'formik';
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import todoSchema from '../../validation/todoSchema';
-import TodoService from '../../services/TodoService';
 import { toast } from 'react-toastify';
 import styles from './single-todo.module.css';
+import { TodoContext } from '../../context/TodoContext';
 const SingleTodo = () => {
   const params = useParams();
   const navigate = useNavigate();
-  const [todo, setTodo] = useState(null);
 
-  const todoService = new TodoService();
+  const [todo, setTodo] = useState(null);
+  const { updateTodo, getTodoById } = useContext(TodoContext);
 
   useEffect(() => {
-    const todo = todoService.getTodoById(params.todoId);
+    const todo = getTodoById(params.todoId);
     if (todo) {
       setTodo(todo);
     } else {
@@ -27,7 +27,7 @@ const SingleTodo = () => {
     enableReinitialize: true,
     validationSchema: todoSchema,
     onSubmit: (values) => {
-      todoService.updateTodo(params.todoId, values);
+      updateTodo(params.todoId, values);
       toast.success('Success');
       navigate('/');
     },

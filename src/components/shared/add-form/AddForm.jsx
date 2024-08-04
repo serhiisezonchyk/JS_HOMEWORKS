@@ -1,17 +1,20 @@
 import { Button, Input, TextField } from '@mui/material';
 import { Formik, useFormik } from 'formik';
-import React from 'react';
+import React, { useContext } from 'react';
 import styles from './add-form.module.css';
 import todoSchema from '../../../validation/todoSchema';
 import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames';
-const AddForm = ({ onSubmit, className }) => {
+import { TodoContext } from '../../../context/TodoContext';
+const AddForm = ({ className }) => {
+  const { createTodo } = useContext(TodoContext);
+
   const formik = useFormik({
     initialValues: todoSchema.cast(),
     validationSchema: todoSchema,
     onSubmit: (values) => {
       const newTodo = { id: uuidv4(), ...values };
-      onSubmit(newTodo);
+      createTodo(newTodo);
     },
   });
   return (

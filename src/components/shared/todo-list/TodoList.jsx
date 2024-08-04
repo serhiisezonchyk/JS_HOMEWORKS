@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {
   List,
   ListItem,
@@ -12,15 +12,14 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import { useNavigate } from 'react-router-dom';
 import classNames from 'classnames';
 import styles from './todo-list.module.css';
+import { TodoContext } from '../../../context/TodoContext';
 
 const TodoList = ({
-  todos,
   className,
   isView = true,
-  onDelete,
-  onStatusChange,
 }) => {
   const navigate = useNavigate();
+  const { todos, deleteTodo, changeStatus } = useContext(TodoContext);
 
   return (
     <div className={classNames(className)}>
@@ -42,7 +41,7 @@ const TodoList = ({
                 <Select
                   value={todo.status}
                   size='small'
-                  onChange={(e) => onStatusChange(todo.id, e.target.value)}
+                  onChange={(e) => changeStatus(todo.id, e.target.value)}
                 >
                   <MenuItem value='completed'>Completed</MenuItem>
                   <MenuItem value='not-completed'>Not Completed</MenuItem>
@@ -51,7 +50,7 @@ const TodoList = ({
                 <IconButton
                   edge='end'
                   aria-label='delete'
-                  onClick={() => onDelete(todo.id)}
+                  onClick={() => deleteTodo(todo.id)}
                 >
                   <DeleteIcon />
                 </IconButton>
