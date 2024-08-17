@@ -1,10 +1,8 @@
-import './App.css'
+import AppRouter from './components/AppRouter';
+import { Button } from './components/ui/button';
 
 function App() {
-
-  return (
-    <>tet</>
-  )
+  return <AppRouter />;
 }
 
-export default App
+export default App;
